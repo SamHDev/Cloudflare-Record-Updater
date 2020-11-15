@@ -18,6 +18,14 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 
 ### Ubuntu systemwide install (assumes root)
+Run theese commands one by one as root. 
+* Clone the source code
+* Build the binary
+* Move the binary to the correct location
+* Move the example config to the correct location
+* Move the service config to the correct location
+* Reload and enable the service
+* Start the service
 ```
 cd /tmp
 git clone http://git.samhdev.net/samhdev/cloudflare_updater.git
