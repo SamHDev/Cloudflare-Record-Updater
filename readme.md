@@ -28,10 +28,12 @@ cd /tmp
 git clone http://git.samhdev.net/samhdev/cloudflare_updater.git
 cd cloudflare_updater
 cargo build --release
+
 mv target/release/cloudflare_updater /usr/bin/cloudflare_updater
 mkdir /etc/cloudflare_updater/
 mv install/ExampleConfig.Toml /etc/cloudflare_updater/Config.Toml
 mv install/cloudflare_updater.service /sys/systemd/system/cloudflare_updater.service
+
 sudo systemctl daemon-reload
 sudo systemctl enable cloudflare_updater
 
