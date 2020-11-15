@@ -10,8 +10,8 @@ A simple, lightweight and asynchronous application that updates Cloudflare DNS r
 
 # Installation
 To build this program, you'll need the Rust Toolchain.
-It's easily installable from [RustUp](https://rustup.rs/#) for windows and Unix.
-If your on Unix and have Curl installed you can run:
+It's easily installable from [RustUp](https://rustup.rs/#) for Windows and Unix 
+and can be installed on unix by running the following command provided that you have curl installed.
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
