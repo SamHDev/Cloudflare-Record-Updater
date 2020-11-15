@@ -17,7 +17,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 
-# Ubuntu systemwide install (assumes root)
+### Ubuntu systemwide install (assumes root)
 ```
 cd /tmp
 git clone http://git.samhdev.net/samhdev/cloudflare_updater.git
