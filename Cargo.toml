@@ -1,0 +1,26 @@
+[package]
+name = "cloudflare_updater"
+version = "0.1.0"
+authors = ["SamHDev <software@samh.dev>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+toml="0.5.7"
+log = "0.4.11"
+env_logger = "0.8.1"
+regex = "1.4.2"
+serde_json = "1.0.59"
+
+[dependencies.serde]
+version = "1.0.117"
+features = ["derive"]
+
+[dependencies.tokio]
+version = "0.2.22"
+features = ["full"]
+
+[dependencies.reqwest]
+version = "0.10.8"
+features = ["json"]
