@@ -1,0 +1,12 @@
+[Unit]
+Description=Cloudflare Record Updater
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/etc/cloudflare_updater/
+ExecStart=/usr/bin/cloudflare_updater
+
+[Install]
+WantedBy=multi-user.target

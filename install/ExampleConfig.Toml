@@ -1,0 +1,4 @@
+api_key = 'ENTER_KEY_HERE'
+service = 'ipify'
+interval = 300
+names = ["server.example.com"]
