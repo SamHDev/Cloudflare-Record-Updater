@@ -53,6 +53,7 @@ This appliaction requires `Zone.Zone`, `Zone.DNS` with edit permissions
 4. Set Token name
 5. Add the following in the *Permissions* section
 > `Zone`     `Zone`      `Read`
+>
 > `Zone`     `DNS`      `Edit`
 
 
