@@ -96,18 +96,20 @@ The configuration is in the TOML format, which makes it highly readable and easy
 
 #### Example Configs
 ##### Place Holder
+A sample configuration with non-real examples
 ```
 api_key = 'ENTER_KEY_HERE'
 service = 'ipify'
 interval = 300
 names = ["server.example.com"]
 ```
-#### Example Config
+##### Example Config
+A sample configuration with more realastic examples
 ```
 api_key = 'RGJtHeULFELunHmSncnhbjuzGQERcNutGCKTDoaL'
 service = 'ipify'
 interval = 120
-names = ["home.gamersite.tk"]
+names = ["home.gamersite.tk", "house.gamersite.tk"]
 ```
 
 
