@@ -52,7 +52,7 @@ This appliaction requires `Zone.Zone`, `Zone.DNS` with edit permissions
 3. Create Custom Token
 4. Set Token name
 5. Add the following in the *Permissions* section
-6. ```Zone     Zone      Read
-Zone     DNS     Edit```
+> `Zone`     `Zone`      `Read`
+> `Zone`     `DNS`      `Edit`
 
 
