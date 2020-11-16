@@ -74,24 +74,24 @@ The configuration is in the TOML format, which makes it highly readable and easy
 
 ### Configuration Fields
 #### `api_key` 
-The API KEY for cloudflare to use. 
-Paste in the value aqauired from the [instructions](#cloudflare-api-token) above.
-Make sure to keep the `'` on either side to make it a valid string.
+- The API KEY for cloudflare to use. 
+- Paste in the value aqauired from the [instructions](#cloudflare-api-token) above.
+- Make sure to keep the `'` on either side to make it a valid string.
 
 #### `service`
-*The IP 'grabber' service to use.
-Current services are:
-* ipify
+- The IP 'grabber' service to use.
+- Current services are:
+    * ipify
 
 #### `interval`
-The Interval to query the IP and update records in seconds.
-Can be any number between 1-4294967295.
-Either 60, 120 or 300 is recommended for a decent update time.
+- The Interval to query the IP and update records in seconds.
+- Can be any number between 1-4294967295.
+- Either 60, 120 or 300 is recommended for a decent update time.
 
 #### `names`
-The records to update via cloudflare.
-In the format `<record>.<domain>`.
-For example, the domain `gamersite.tk` has a record `home`, the valid name would be `home.gamersite.tk`.
+- The records to update via cloudflare.
+- In the format `<record>.<domain>`.
+- For example, the domain `gamersite.tk` has a record `home`, the valid name would be `home.gamersite.tk`.
 
 
 #### Example Configs
