@@ -51,7 +51,8 @@ This appliaction requires `Zone.Zone`, `Zone.DNS` with edit permissions
 2. Create Token
 3. Create Custom Token
 4. Set Token name
-5. Add the following in the *Permissions* section: ```Zone     Zone      Read
+5. Add the following in the *Permissions* section
+6. ```Zone     Zone      Read
 Zone     DNS     Edit```
 
 
