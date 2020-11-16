@@ -16,9 +16,7 @@ It can be simply installed on Unix by running the following command provided tha
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-
-### Ubuntu systemwide install (assumes root)
-Run theese commands one by one as root. 
+Run theese commands one by one as root. A short description of what theese commands will do:
 * Clone the source code
 * Build the binary
 * Move the binary, example config and service config to the correct location
@@ -41,7 +39,19 @@ sudo systemctl enable cloudflare_updater
 ## sudo nano /etc/cloudflare_updater/Config.Toml
 
 sudo systemctl start cloudflare_updater
+
+rm -r /tmp/cloudflare_updater
 ```
 
+
+# Configuration
+Please get a Cloudflare API token from the [Cloudflare dashboard](https://dash.cloudflare.com/profile/api-tokens).
+This appliaction requires `Zone.Zone`, `Zone.DNS` with edit permissions
+1. Go to the [Cloudflare dashboard API tokens page](https://dash.cloudflare.com/profile/api-tokens)
+2. Create Token
+3. Create Custom Token
+4. Set Token name
+5. Add the following in the *Permissions* section: ```Zone     Zone      Read
+Zone     DNS     Edit```
 
 
