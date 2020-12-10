@@ -1,6 +1,7 @@
 use reqwest;
 use serde::{Serialize, Deserialize};
 use serde_json as json;
+use serde_json::json;
 
 pub fn get_client(api_key: &str) -> reqwest::Client {
     let mut headers = reqwest::header::HeaderMap::new();
@@ -75,8 +76,8 @@ pub async fn get_record(client: &reqwest::Client, zone_id: &str, record_id: &str
 }
 
 pub async fn push_record(client: &reqwest::Client, zone_id: &str, record_id: &str, record: &CloudflareRecordInstance) -> Result<(), String> {
-    match client.put(&format!("https://api.cloudflare.com/client/v4/zones/{}/dns_records/{}", zone_id, record_id))
-        .json(record)
+    match client.patch(&format!("https://api.cloudflare.com/client/v4/zones/{}/dns_records/{}", zone_id, record_id))
+        .json(&json!({"content": record.ip.clone()}))
         .send()
         .await {
         Ok(a) => match a.error_for_status() {
@@ -123,6 +124,7 @@ pub struct CloudflareIdInstance {
 
 #[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct CloudflareRecordInstance {
+    #[serde(skip_serializing)]
     pub id: String,
     #[serde(rename="type")]
     pub record_type: String,
