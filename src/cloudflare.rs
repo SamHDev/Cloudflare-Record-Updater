@@ -75,7 +75,7 @@ pub async fn get_record(client: &reqwest::Client, zone_id: &str, record_id: &str
 }
 
 pub async fn push_record(client: &reqwest::Client, zone_id: &str, record_id: &str, record: &CloudflareRecordInstance) -> Result<(), String> {
-    match client.post(&format!("https://api.cloudflare.com/client/v4/zones/{}/dns_records/{}", zone_id, record_id))
+    match client.put(&format!("https://api.cloudflare.com/client/v4/zones/{}/dns_records/{}", zone_id, record_id))
         .json(record)
         .send()
         .await {

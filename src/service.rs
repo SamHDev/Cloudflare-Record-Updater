@@ -18,11 +18,16 @@ impl ResolverService {
     pub async fn get(&self) -> Option<String> {
         match &self {
             IPIFY => {
-                match get("https://api.ipify.org/").await {
-                    Ok(r) => r.text().await.ok(),
+                match get("https://api.ipify.org/?format=json").await {
+                    Ok(r) => Some(r.json::<IpifyResponse>().await.ok()?.ip),
                     Err(_e) => None
                 }
             }
         }
     }
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct IpifyResponse {
+    pub ip: String
 }
