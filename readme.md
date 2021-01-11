@@ -6,7 +6,6 @@ A simple, lightweight and asynchronous application that updates Cloudflare DNS r
 * Fully Asynchronous
 * Lightweight
 * Configurable
-*
 
 ## Installation
 To build this program from source, you'll need the Rust Toolchain.
