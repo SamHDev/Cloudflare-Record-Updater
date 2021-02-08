@@ -22,7 +22,7 @@ Run theese commands one by one as root. A short description of what theese comma
 * Reload, enable and start the service
 ```
 cd /tmp
-git clone http://git.samhdev.net/samhdev/cloudflare_updater.git
+git clone https://github.com/SamHDev/cloudflare-record-updater
 cd cloudflare_updater
 cargo build --release
 
